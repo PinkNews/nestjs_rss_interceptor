@@ -1,5 +1,5 @@
 {
-  "name": "nestjs-rss-interceptor",
+  "name": "@pinknews/nest_rss_interceptor",
   "version": "1.0.0",
   "description": "Formats and outputs an rss feed fron nestjs.",
   "main": "index.js",
