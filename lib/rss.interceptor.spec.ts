@@ -6,7 +6,11 @@ describe('InsightsController', () => {
   });
 
   it('should be defined', () => {
-    let interceptor = new RssInterceptor();
+    const interceptor = new RssInterceptor();
     expect(interceptor).toBeDefined();
   });
+
+  it('should parse empty rss feed', () => {
+    const interceptor = new RssInterceptor();
+  })
 });
