@@ -1,1 +1,6 @@
 lib/
+.tool-versions
+.prettierrc
+.eslintrc.js
+tsconfig.json
+
