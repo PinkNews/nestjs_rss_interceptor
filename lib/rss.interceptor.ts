@@ -2,7 +2,7 @@ import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nes
 import { HttpArgumentsHost } from '@nestjs/common/interfaces';
 import { format } from 'date-fns';
 import { Observable, map } from 'rxjs';
-import { js2xml } from "xml-js";
+import { js2xml } from 'xml-js';
 
 export type RssHour = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23;
 export type RssDay = 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
@@ -97,10 +97,11 @@ export class RssInterceptor implements NestInterceptor {
   intercept(context: ExecutionContext, next: CallHandler<RssChannel>): Observable<any> | Promise<Observable<any>> {
     return next.handle().pipe(
       map((channel: RssChannel) => {
-        const response = context.switchToHttp().getResponse();
-        const request = context.switchToHttp().getRequest();
+        const http = context.switchToHttp();
+        const response = http.getResponse();
+        const request = http.getRequest();
 
-        const protocol = this.protocolExtractor(context.switchToHttp());
+        const protocol = this.protocolExtractor(http);
         const url = `${protocol}://${request.headers.host}${request.url}`;
 
         const obj = {
