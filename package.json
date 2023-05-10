@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Formats and outputs an rss feed fron nestjs.",
   "main": "dist/rss.interceptor.js",
-  "types" : "dist/rss.interceptor.d.ts",
+  "types": "dist/rss.interceptor.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "nestjs",
@@ -26,6 +26,27 @@
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
+    "@nestjs/testing": "^9.4.0",
+    "@types/jest": "^29.5.1",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "lib",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
   }
 }
