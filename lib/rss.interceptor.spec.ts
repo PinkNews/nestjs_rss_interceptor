@@ -2,8 +2,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { RssInterceptor } from './rss.interceptor';
 
 describe('InsightsController', () => {
-  beforeEach(async () => {
-  });
+  beforeEach(async () => {});
 
   it('should be defined', () => {
     const interceptor = new RssInterceptor();
@@ -12,5 +11,5 @@ describe('InsightsController', () => {
 
   it('should parse empty rss feed', () => {
     const interceptor = new RssInterceptor();
-  })
+  });
 });
