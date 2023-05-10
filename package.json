@@ -5,7 +5,7 @@
   "main": "dist/rss.interceptor.js",
   "types": "dist/rss.interceptor.d.ts",
   "scripts": {
-    "clean": "rm -r ./dist",
+    "clean": "rm -rf ./dist",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint \"{lib,apps,libs,test}/**/*.ts\" --fix",
