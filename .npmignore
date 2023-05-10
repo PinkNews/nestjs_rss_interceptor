@@ -3,4 +3,5 @@ lib/
 .prettierrc
 .eslintrc.js
 tsconfig.json
+.github
 
