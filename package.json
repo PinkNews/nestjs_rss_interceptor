@@ -1,0 +1,15 @@
+{
+  "name": "nestjs-rss-interceptor",
+  "version": "1.0.0",
+  "description": "Formats and outputs an rss feed fron nestjs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nestjs",
+    "rss"
+  ],
+  "author": "Sam Dean (PinkNews)",
+  "license": "ISC"
+}
