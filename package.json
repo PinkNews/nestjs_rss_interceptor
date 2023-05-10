@@ -13,8 +13,14 @@
   "author": "Sam Dean (PinkNews) <sam.dean@pinknews.co.uk>",
   "license": "MIT",
   "homepage": "https://github.com/PinkNews/nestjs_rss_interceptor",
-  "repository": { 
-    "type": "git", 
+  "repository": {
+    "type": "git",
     "url": "git@github.com:PinkNews/nestjs_rss_interceptor.git"
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.4.0",
+    "date-fns": "^2.30.0",
+    "rxjs": "^7.8.1",
+    "xml-js": "^1.6.11"
   }
 }
