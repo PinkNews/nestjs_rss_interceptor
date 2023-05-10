@@ -5,10 +5,11 @@
   "main": "dist/rss.interceptor.js",
   "types": "dist/rss.interceptor.d.ts",
   "scripts": {
+    "clean": "rm -r ./dist",
     "build": "tsc",
     "test": "jest",
     "lint": "eslint \"{lib,apps,libs,test}/**/*.ts\" --fix",
-    "publish": "npm run build && npm publish --access public"
+    "publish": "npm run clean && npm run build && npm publish --access public"
   },
   "keywords": [
     "nestjs",
