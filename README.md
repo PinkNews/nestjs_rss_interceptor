@@ -3,7 +3,9 @@ This adds a `RssInterceptor`, which deals with turning a data blob from your con
 Your controller should return a `RssChannel` instance, which mirrors the rss spec https://validator.w3.org/feed/docs/rss2.html.
 
 ```
+@Controller()
 export class RssController {
+    @Get('rss')
     @UseInterceptors(RssInterceptor)
     getRss() {
         return {
