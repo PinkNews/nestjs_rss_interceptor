@@ -2,10 +2,7 @@
   "name": "@pinknews/nestjs_rss_interceptor",
   "version": "1.0.6",
   "description": "Formats and outputs an rss feed fron nestjs.",
-  "exports": {
-    "rss.interceptor": "./dist/rss.interceptor.js",
-    "rss.decorator": "./dist/rss.decorator.js"
-  },
+  "main": "dist/rss.interceptor.js",
   "types": "dist/rss.interceptor.d.ts",
   "scripts": {
     "clean": "rimraf ./dist",

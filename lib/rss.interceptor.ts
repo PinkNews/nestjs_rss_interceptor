@@ -1,4 +1,4 @@
-import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nestjs/common';
+import { CallHandler, ExecutionContext, Injectable, NestInterceptor, UseInterceptors, applyDecorators } from '@nestjs/common';
 import { HttpArgumentsHost } from '@nestjs/common/interfaces';
 import { format } from 'date-fns';
 import { Observable, map } from 'rxjs';
@@ -89,6 +89,10 @@ export interface RssItem {
 export type ProtocolExtractor = (host: HttpArgumentsHost) => string;
 
 const defaultProtocolExtractor: ProtocolExtractor = host => host.getRequest().protocol;
+
+export function Rss(protocolExtractor?: ProtocolExtractor) {
+  return applyDecorators(UseInterceptors(new RssInterceptor(protocolExtractor)));
+}
 
 @Injectable()
 export class RssInterceptor implements NestInterceptor {
